@@ -13,12 +13,12 @@ task_mgr = TaskManager()
 # ---------------- User Commands ----------------
 @app.command(name="create_user")
 def create_user(username: str):
-    """Create a new user."""
+    # Create a new user.
     user_mgr.create_user(username)
 
 @app.command(name="list_users")
 def list_users():
-    """List all users."""
+    # List all users.
     user_mgr.list_users()
 
 @app.command(name="delete_user")

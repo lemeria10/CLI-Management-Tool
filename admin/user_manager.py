@@ -1,36 +1,4 @@
-# from admin.file_manager import FileManager
 
-# class UserManager:
-#     # Manages users.
-#     def __init__(self):
-#         self.file = FileManager("users.json")
-
-#     def create_user(self, username):
-#         users = self.file.load()
-#         if any(u["username"] == username for u in users):
-#             print("User already exists.")
-#             return
-#         users.append({"username": username})
-#         self.file.save(users)
-#         print("User created successfully!")
-
-#     def list_users(self):
-#         users = self.file.load()
-#         if not users:
-#             print("No users found.")
-#             return
-#         print("\nUsers:")
-#         for u in users:
-#             print("-", u["username"])
-
-#     def delete_user(self, username):
-#         users = self.file.load()
-#         updated = [u for u in users if u["username"] != username]
-#         if len(updated) == len(users):
-#             print("User not found.")
-#             return
-#         self.file.save(updated)
-#         print("User deleted successfully!")
 from admin.base_manager import BaseManager
 
 class UserManager(BaseManager):
